@@ -2,7 +2,7 @@
     <section class="min-h-screen w-full flex flex-col" ref="contactSection" id="contact-section">
         <div class="relative flex py-5 items-center" :class="[visible ? 'translate-y-0 opacity-1 blur-0' : 'translate-y-4 opacity-0 blur-sm', 'transition-all motion-reduce:transition-none duration-500']">
             <div class="flex-grow border-t border-black dark:border-white border-1"></div>
-            <h1 class="text-3xl font-bold px-5">📭 Contact</h1>
+            <h1 class="text-3xl font-bold px-5">Contact</h1>
             <div class="flex-grow border-t border-black dark:border-white border-1"></div>
         </div>
         <div :class="['flex flex-col my-auto transition-all motion-reduce:transition-none duration-500 delay-300', visible ? 'translate-y-0 opacity-1 blur-0' : 'translate-y-4 opacity-0 blur-sm']">
