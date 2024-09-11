@@ -1,12 +1,12 @@
 /* replace with your own fonts if need be */
-@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Open+Sans');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 #app {
-    font-family: 'Source Code Pro', monospace; /* update if importing a different font than the one above */
+    font-family: 'Open Sans', sans-serif; /* update if importing a different font than the one above */
     font-size: 16px; /* update if needed (16px is the standard for modern browsers) */
     height: 100%;
     margin: 0;

@@ -14,7 +14,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="grid grid-rows-2 gap-y-4 order-1 xl:order-none">
+            <!-- <div class="grid grid-rows-2 gap-y-4 order-1 xl:order-none"> -->
+                <div class="order-1 xl:order-none">
                 <!-- <div class="grid grid-cols-2 gap-x-4">
                     <div>
                         <img :src="getImageUrl(content.photo1Link)" class="shadow-md" loading="lazy"/>
@@ -24,7 +25,7 @@
                     </div>
                 </div> -->
                 <div>
-                    <img :src="getImageUrl(content.photo3Link)" loading="lazy"/>
+                    <img :src="getImageUrl(content.photo3Link)" class="w-1/2 h-1/2 mx-auto" loading="lazy"/>
                 </div>
             </div>
         </div>
