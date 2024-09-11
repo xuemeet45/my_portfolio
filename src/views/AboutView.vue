@@ -25,7 +25,7 @@
                     </div>
                 </div> -->
                 <div>
-                    <img :src="getImageUrl(content.photo3Link)" class="w-1/2 h-1/2 mx-auto" loading="lazy"/>
+                    <img :src="getImageUrl(content.photo3Link)" class="w-1/2 h-1/2 mx-auto rounded-full" loading="lazy"/>
                 </div>
             </div>
         </div>
