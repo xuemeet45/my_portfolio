@@ -1,13 +1,13 @@
 <template>
-    <div :class="['flex flex-col lg:grid lg:grid-cols-2 lg:gap-x-4 transition-opacity motion-reduce:transition-none duration-500', showProject ? 'opacity-1' : 'opacity-0']">
-        <div v-if="!project.alignLeft" class="order-first pb-4 lg:pb-0 lg:order-none lg:block">
+        <div :class="['transition-opacity motion-reduce:transition-none duration-500']">
+        <!-- <div v-if="!project.alignLeft" class="order-first pb-4 lg:pb-0 lg:order-none lg:block">
             <img
                 @load="showProject = !showProject"
                 :src="getImageUrl(project.imageLink)"
                 class="shadow-md"
                 loading="lazy"
             />
-        </div>
+        </div> -->
         <div class="flex flex-col space-y-4" :class="project.alignLeft ? 'text-left' : 'lg:text-right'">
             <p>{{ project.yearCompleted }}</p>
             <h3 class="text-xl font-extrabold pb-2">{{ project.projectName }}</h3>
@@ -30,14 +30,14 @@
                 </a>
             </div>
         </div>
-        <div v-if="project.alignLeft" class="order-first pb-4 lg:pb-0 lg:order-none lg:block">
+        <!-- <div v-if="project.alignLeft" class="order-first pb-4 lg:pb-0 lg:order-none lg:block">
             <img
                 @load="showProject = !showProject"
                 :src="getImageUrl(project.imageLink)"
                 class="shadow-md"
                 loading="lazy"
             />
-        </div>
+        </div> -->
     </div>
 </template>
 <script setup>

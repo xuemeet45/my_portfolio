@@ -13,7 +13,17 @@
 								<font-awesome-icon icon="fa-brands fa-github" class="h-8 w-8 md:h-12 md:w-12 text-black transition ease-out hover:-translate-y-1 motion-reduce:hover:translate-y-0 duration-300 dark:text-slate-300"></font-awesome-icon>
 							</a>
 						</li>
-						<li v-show="linkedinLink" :class="['transition-all motion-reduce:transition-none duration-500 delay-[100ms]', showLanding ? 'translate-y-0 opacity-1' : '-translate-y-4 opacity-0']">
+						<li v-show="facebookLink" :class="['transition-all motion-reduce:transition-none duration-500', showLanding ? 'translate-y-0 opacity-1' : '-translate-y-4 opacity-0']">
+							<a :href="facebooklink" target="_blank">
+								<font-awesome-icon icon="fa-brands fa-facebook" class="h-8 w-8 md:h-12 md:w-12 text-black transition ease-out hover:-translate-y-1 motion-reduce:hover:translate-y-0 duration-300 dark:text-slate-300"></font-awesome-icon>
+							</a>
+						</li>
+						<li v-show="instagramLink" :class="['transition-all motion-reduce:transition-none duration-500 delay-[150ms]', showLanding ? 'translate-y-0 opacity-1' : '-translate-y-4 opacity-0']">
+							<a :href="instagramLink" target="_blank">
+								<font-awesome-icon icon="fa-brands fa-instagram" class="h-8 w-8 md:h-12 md:w-12 text-black transition ease-out hover:-translate-y-1 motion-reduce:hover:translate-y-0 duration-300 dark:text-slate-300"></font-awesome-icon>
+							</a>
+						</li>
+						<li v-show="linkedinLink" :class="['transition-all motion-reduce:transition-none duration-500 delay-[150ms]', showLanding ? 'translate-y-0 opacity-1' : '-translate-y-4 opacity-0']">
 							<a :href="linkedinLink" target="_blank">
 								<font-awesome-icon icon="fa-brands fa-linkedin" class="h-8 w-8 md:h-12 md:w-12 text-black transition ease-out hover:-translate-y-1 motion-reduce:hover:translate-y-0 duration-300 dark:text-slate-300"></font-awesome-icon>
 							</a>
@@ -48,8 +58,7 @@
 						<ContactView :content="portfolio.contact" :transitions="portfolio.transitions" />
 
 						<footer class="hidden text-center md:block mb-5">
-							<p>🚀 Designed & Created by <a href="https://github.com/feifyKike" class="hover:text-link-color" target="_blank">Maxim Shelepov</a></p>
-							<a href="https://github.com/feifyKike/webdev_portfolio" class="hover:text-link-color" target="_blank">Code available on Github 👾</a>
+							<p><a href="https://sumitpun.com.np" class="hover:text-link-color" target="_blank">Pun Magar Sumit</a></p>
 						</footer>
 					</div>
 				</div>
@@ -57,8 +66,7 @@
 					<p :class="['fixed bottom-2 right-10 origin-top-right rotate-90 transition-all motion-reduce:transition-none duration-500', showLanding ? 'translate-y-0 opacity-1' : '-translate-y-4 opacity-0']">📍 Based in {{ portfolio.greeting.basedLocation }}</p>
 				</div>
 				<footer class="block text-center text-sm md:hidden order-last mb-5">
-					<p>🚀 Designed & Created by <a href="https://maximshelepov.com" class="hover:text-link-color" target="_blank">Maxim Shelepov</a></p>
-					<a href="https://github.com/feifyKike/webdev_portfolio" class="hover:text-link-color" target="_blank">Code available on Github 👾</a>
+					<p><a href="https://sumitpun.com.np" class="hover:text-link-color" target="_blank">Pun Magar Sumit</a></p>
 				</footer>
 			</div>
 		</div>
@@ -97,6 +105,8 @@ const linkedinLink = portfolio.socialMediaLinks.linkedin
 const mediumLink = portfolio.socialMediaLinks.medium
 const stackoverflowLink = portfolio.socialMediaLinks.stackoverflow
 const xTwitterLink = portfolio.socialMediaLinks.xtwitter;
+const facebookLink = portfolio.socialMediaLinks.facebookLink;
+const instagramLink = portfolio.socialMediaLinks.instagramLink;
 
 const splashScreen = () => {
 	if (portfolio.splashScreen) {

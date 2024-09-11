@@ -26,9 +26,9 @@ const hashtags = ref([]);
 const message = computed(() => {
     switch (status.value) {
         case 0:
-            return "🤔 LOADING..."
+            return "🤔 Loading..."
         case 1:
-            return "🚀 SUCCESS!"
+            return "🙏 Welcome!"
     }
 })
 const percentage = computed(() => {
