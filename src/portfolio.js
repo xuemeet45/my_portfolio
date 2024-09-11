@@ -22,7 +22,7 @@ const splashScreen = true // recommended: for best behavior after refresh
 const greeting = {
     intro: "Hello 👋, my name is",
     name: "Pun Magar Sumit",
-    message: "I am a skilled system development engineer with nearly 4 years of experience in full-stack development, specializing in TypeScript, JavaScript, and Java. I create scalable, high-performance solutions while collaborating with cross-functional teams to ensure successful project delivery. Passionate about learning new technologies, I continuously strive to build innovative, future-proof applications that exceed client expectations..",
+    message: "I am a system development engineer with nearly 4 years of experience in full-stack development, specializing in TypeScript, JavaScript, and Java. I create scalable, high-performance solutions while collaborating with cross-functional teams to ensure successful project delivery. Passionate about learning new technologies, I continuously strive to build innovative, future-proof applications that exceed client expectations.",
     basedLocation: "Yokohama, Japan",
     resumeLink: "https://drive.google.com/file/d/1BT3WBmcAZIot7_BbzS3zUw4NuLmwW9wB/view?usp=drive_link", // recommended: google drive file share link (change to "anyone on the internet can view")
     resumeShow : false,
