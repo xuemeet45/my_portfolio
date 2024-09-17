@@ -20,7 +20,7 @@ onMounted(() => {
     progress()
 })
 
-const max = 20
+const max = 17
 const character = '#'
 const hashtags = ref([]);
 const message = computed(() => {
