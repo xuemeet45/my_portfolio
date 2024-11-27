@@ -131,7 +131,7 @@ const works = [
     },
     {
         projectName: "Premium Coupon QR code payment service for Local Government - Web application",
-        yearCompleted: "April 2023 - September 2024",
+        yearCompleted: "April 2023 - October 2024",
         description: "Participated in the development, and deployment of a web application for a premium coupon QR code payment service aimed at local governments. Contributed to both front-end and back-end development, playing a key role in the project's lifecycle.",
         techStack: "Java, Spring Boot, TypeScript, JavaScript, Microsoft SQL, Vue.js, GitHub, Docker, Jira, Swagger, AWS",
         links: [],
