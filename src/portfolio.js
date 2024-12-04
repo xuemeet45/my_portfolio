@@ -149,7 +149,8 @@ const contact = {
         shortTitle: "Get in Touch",
         note: [], // paragraph breaks will be entered after each item,
         link: {
-            email: "xuemmet45@gmail.com", // email takes precedance
+            email: "contact@sumitpun.com.np", // email takes precedance
+            ccemail: "xuemmet45@gmail.com", 
             other: "https://forms.gle/W3MswTKsPWMxEbn58"
         },
         responseTimeMessage: ""
