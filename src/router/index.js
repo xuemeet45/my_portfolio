@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import MainView from '../views/MainView.vue'
+import GuideView from '../views/GuideView.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,7 +9,12 @@ const router = createRouter({
             path: '/',
             name: 'main',
             component: MainView
-        }
+        },
+        {
+            path: '/guide',
+            name: 'guide',
+            component: GuideView,
+          },
     ],
     scrollBehavior(to, from, savedPosition) {
         if (to.hash && to.hash == '#landing-page') {
