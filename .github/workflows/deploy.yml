@@ -20,6 +20,9 @@ jobs:
       - name: Install npm dependencies
         run: npm ci --ignore-scripts
 
+      - name: Install additional npm packages
+        run: npm install
+
       - name: Build project
         run: npm run build
 
