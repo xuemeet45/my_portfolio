@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - SumitAuto</title>
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --text-primary: #1a1a1a;
+            --accent-color: #4368e3;
+            --card-bg: #f8f9fa;
+            --border-color: #e0e0e0;
+        }
+        
+        [data-theme="dark"] {
+            --bg-primary: #1e1e1e;
+            --text-primary: #f0f0f0;
+            --accent-color: #5b8cff;
+            --card-bg: #2d2d2d;
+            --border-color: #444;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        h1, h2, h3 {
+            color: var(--accent-color);
+        }
+
+        h1 { font-size: 2.2rem; }
+        h2 { font-size: 1.6rem; margin-top: 2.5rem; }
+        h3 { font-size: 1.3rem; }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .theme-toggle {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Privacy Policy</h1>
+        <button class="theme-toggle" onclick="toggleTheme()">
+            <span id="theme-icon">🌙</span> <span id="theme-text">Dark Mode</span>
+        </button>
+    </header>
+
+    <main>
+        <div class="card">
+            <p><em>Last Updated: June 15, 2024</em></p>
+            <p>This Privacy Policy describes how SumitAuto collects, uses, and shares information when you use our TikTok automation service.</p>
+            
+            <h2>1. Information Collection</h2>
+            <p>We access only the minimum data required for functionality:</p>
+            <ul>
+                <li><strong>TikTok Account Data:</strong> Username, profile picture, and account ID</li>
+                <li><strong>Google Drive Content:</strong> Only videos you explicitly select for upload</li>
+                <li><strong>Metadata:</strong> Video titles, descriptions, and creation dates</li>
+            </ul>
+
+            <h2>2. Data Usage</h2>
+            <p>Your information is used exclusively for:</p>
+            <ul>
+                <li>Processing automated video uploads to your TikTok account</li>
+                <li>Temporary caching during transfer operations</li>
+                <li>Service improvement analytics (aggregated and anonymized)</li>
+            </ul>
+            <p>We never sell or rent your personal data to third parties.</p>
+
+            <h2>3. Data Retention</h2>
+            <p>We retain information only as long as necessary:</p>
+            <ul>
+                <li>OAuth tokens are stored until you revoke access</li>
+                <li>Video content is deleted immediately after processing</li>
+                <li>Logs are purged after 30 days</li>
+            </ul>
+
+            <h2>4. Your Rights</h2>
+            <p>You have full control over your data:</p>
+            <ul>
+                <li><strong>Access:</strong> Request a copy of stored data</li>
+                <li><strong>Deletion:</strong> Ask us to erase your information</li>
+                <li><strong>Revocation:</strong> Disconnect via <a href="https://www.tiktok.com/setting" target="_blank">TikTok Settings</a></li>
+            </ul>
+            <p>Contact us at: <a href="mailto:contact@sumitpun.com.np">contact@sumitpun.com.np</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 SumitAuto. All rights reserved.</p>
+        <p><a href="terms-of-service.html">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        // Theme management
+        function setTheme(theme) {
+            document.body.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            
+            const icon = document.getElementById('theme-icon');
+            const text = document.getElementById('theme-text');
+            
+            if (theme === 'dark') {
+                icon.textContent = '☀️';
+                text.textContent = 'Light Mode';
+            } else {
+                icon.textContent = '🌙';
+                text.textContent = 'Dark Mode';
+            }
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.body.getAttribute('data-theme') || 'light';
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        }
+
+        // Initialize theme
+        const savedTheme = localStorage.getItem('theme') || 
+                         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        setTheme(savedTheme);
+    </script>
+</body>
+</html>
