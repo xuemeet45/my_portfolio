@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - SumitAuto</title>
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --text-primary: #1a1a1a;
+            --accent-color: #4368e3;
+            --card-bg: #f8f9fa;
+            --border-color: #e0e0e0;
+        }
+        
+        [data-theme="dark"] {
+            --bg-primary: #1e1e1e;
+            --text-primary: #f0f0f0;
+            --accent-color: #5b8cff;
+            --card-bg: #2d2d2d;
+            --border-color: #444;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        h1, h2, h3 {
+            color: var(--accent-color);
+        }
+
+        h1 { font-size: 2.2rem; }
+        h2 { font-size: 1.6rem; margin-top: 2.5rem; }
+        h3 { font-size: 1.3rem; }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .theme-toggle {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ol, ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Terms of Service</h1>
+        <button class="theme-toggle" onclick="toggleTheme()">
+            <span id="theme-icon">🌙</span> <span id="theme-text">Dark Mode</span>
+        </button>
+    </header>
+
+    <main>
+        <div class="card">
+            <p><em>Effective: June 15, 2024</em></p>
+            <p>By using SumitAuto, you agree to these Terms of Service. Please read them carefully.</p>
+            
+            <h2>1. Account Requirements</h2>
+            <p>To use our Service, you must:</p>
+            <ol>
+                <li>Be at least 18 years old</li>
+                <li>Own the TikTok account being connected</li>
+                <li>Have rights to all uploaded content</li>
+                <li>Use a <a href="https://www.tiktok.com/business" target="_blank">TikTok Business Account</a> (recommended)</li>
+            </ol>
+
+            <h2>2. Acceptable Use</h2>
+            <p>You agree not to:</p>
+            <ul>
+                <li>Upload content violating <a href="https://www.tiktok.com/community-guidelines" target="_blank">TikTok's Guidelines</a></li>
+                <li>Exceed TikTok's API rate limits (max 50 uploads/day)</li>
+                <li>Use automated comments/likes (beyond video uploads)</li>
+                <li>Share API credentials with others</li>
+            </ul>
+
+            <h2>3. Service Limitations</h2>
+            <p>Our Service:</p>
+            <ul>
+                <li>Depends on TikTok API availability</li>
+                <li>May experience temporary downtime</li>
+                <li>Does not guarantee video performance metrics</li>
+                <li>Reserves right to limit abusive usage</li>
+            </ul>
+
+            <h2>4. Intellectual Property</h2>
+            <p>You retain all rights to your content. We claim no ownership over:</p>
+            <ul>
+                <li>Uploaded videos</li>
+                <li>Account branding</li>
+                <li>Generated content</li>
+            </ul>
+            <p>You grant us limited rights to process content solely for Service operation.</p>
+
+            <h2>5. Termination</h2>
+            <p>We may suspend accounts for:</p>
+            <ol>
+                <li>Repeated policy violations</li>
+                <li>Security threats</li>
+                <li>Payment issues </li>
+            </ol>
+            <p>Appeal suspensions at: <a href="mailto:contact@sumitpun.com.np">contact@sumitpun.com.np</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 SumitAuto. All rights reserved.</p>
+        <p><a href="https://sumitpun.com.np/privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+
+    <script>
+        // Theme management
+        function setTheme(theme) {
+            document.body.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            
+            const icon = document.getElementById('theme-icon');
+            const text = document.getElementById('theme-text');
+            
+            if (theme === 'dark') {
+                icon.textContent = '☀️';
+                text.textContent = 'Light Mode';
+            } else {
+                icon.textContent = '🌙';
+                text.textContent = 'Dark Mode';
+            }
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.body.getAttribute('data-theme') || 'light';
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        }
+
+        // Initialize theme
+        const savedTheme = localStorage.getItem('theme') || 
+                         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        setTheme(savedTheme);
+    </script>
+</body>
+</html>
